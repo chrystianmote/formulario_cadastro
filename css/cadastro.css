@@ -35,7 +35,7 @@ div.row {
     margin: 15px;
 }
 
-select#slt_sexo>option {
+select>option {
     color: black;
 }
 

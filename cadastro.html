@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/twitter.ico">
     <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -25,33 +26,33 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <input type="radio" name="pessoa" id="rdb_pf" checked>
+                        <input  type="radio" name="pessoa" id="rdb_pf" checked>
                         <label for="rdb_pf">Pessoa Física</label>
                         &nbsp;
-                        <input type="radio" name="pessoa" id="rdb_pj">
+                        <input  type="radio" name="pessoa" id="rdb_pj">
                         <label for="rdb_pj">Pessoa Juridica</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-9">
                         <label id="lbl_nome_razao" for="txt_nome_razao">Nome Completo:</label>
-                        <input type="text" name="nome_razao" class="form-control" id="txt_nome_razao"
+                        <input required type="text" name="nome_razao" class="form-control" id="txt_nome_razao"
                             placeholder="Informe seu nome completo...">
                     </div>
                     <div class="col-3">
                         <label id="lbl_nasc_abert" for="dt_nasc_abert">Data de Nascimento:</label>
-                        <input type="date" name="dt_nasc_abert" class="form-control" id="dt_nasc_abert">
+                        <input required type="date" name="dt_nasc_abert" class="form-control" id="dt_nasc_abert">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-9">
                         <label id="lbl_documento" for="txt_documento">CPF:</label>
-                        <input type="text" name="documento" class="form-control" id="txt_documento"
+                        <input required type="text" name="documento" class="form-control" id="txt_documento"
                             placeholder="000.000.000-00">
                     </div>
                     <div class="col-3">
                         <label id="lbl_sexo" for="slt_sexo">Sexo:</label>
-                        <select name="sexo" class="form-control" id="slt_sexo">
+                        <select required name="sexo" class="form-control" id="slt_sexo">
                             <option value="">Selecione...</option>
                             <option value="M">Masculino</option>
                             <option value="F">Feminino</option>
@@ -63,12 +64,12 @@
                 <div class="row">
                     <div class="col-9">
                         <label for="txt_email">E-mail:</label>
-                        <input type="email" name="email" class="form-control" id="txt_email"
+                        <input required type="email" name="email" class="form-control" id="txt_email"
                             placeholder="Informe seu e-mail...">
                     </div>
                     <div class="col-3">
                         <label for="txt_telefone">Celular:</label>
-                        <input type="tel" name="telefone" class="form-control" id="txt_telefone" maxlength="15"
+                        <input required type="tel" name="telefone" class="form-control" id="txt_telefone" maxlength="15"
                             placeholder="(xx) xxxxx-xxxx">
                     </div>
                 </div>
@@ -82,19 +83,19 @@
                 <div class="row">
                     <div class="col-3">
                         <label for="txt_cep">CEP:</label>
-                        <input type="tel" name="cep" class="form-control" id="txt_cep" maxlength="9"
+                        <input required type="tel" name="cep" class="form-control" id="txt_cep" maxlength="9"
                             placeholder="00000-000">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-9">
                         <label for="txt_logradouro">Logradouro:</label>
-                        <input type="text" name="logradouro" class="form-control" id="txt_logradouro"
+                        <input required type="text" name="logradouro" class="form-control" id="txt_logradouro"
                             placeholder="Rua, Avenida, Rodovia...">
                     </div>
                     <div class="col-3">
                         <label for="txt_numero">Numero:</label>
-                        <input type="tel" name="numero" class="form-control" id="txt_numero">
+                        <input required type="tel" name="numero" class="form-control" id="txt_numero">
                     </div>
                 </div>
                 <div class="row">
@@ -105,17 +106,17 @@
                     </div>
                     <div class="col-6">
                         <label for="txt_bairro">Bairro/Setor:</label>
-                        <input type="text" name="bairro" class="form-control" id="txt_bairro">
+                        <input required type="text" name="bairro" class="form-control" id="txt_bairro">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <label for="txt_cidade">Cidade:</label>
-                        <input type="text" name="cidade" class="form-control" id="txt_cidade">
+                        <input required type="text" name="cidade" class="form-control" id="txt_cidade">
                     </div>
                     <div class="col-6">
                         <label for="slt_estado">Estado:</label>
-                        <select class="form-control" id="slt_estado" name="estado">
+                        <select required class="form-control" id="slt_estado" name="estado">
                             <option value="">Selecione...</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -165,10 +166,15 @@
     <footer>
 
     </footer>
-
+    <!-- Biblioteca JQuery -->
     <script src="js/jquery.js"></script>
+    <!-- Plugin JQuery para Mascarar campos -->
     <script src="js/jquery.mask.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+
+    <!-- Biblioteca de Caixa de mensagem personalizada -->
+    <script src="js/sweetalert/sweetalert2.all.js"></script>
+
     <script src="js/cadastro.js"></script>
 </body>
 
