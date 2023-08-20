@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('../font/Poppins/Poppins-Regular.ttf');
+}
+
+/* Aplicando a font importada a todos os elementos */
+* {
+    font-family: Poppins, Roboto, Arial;
+}
