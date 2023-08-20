@@ -1,17 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/cadastro.css">
 </head>
+
 <body>
-    
+    <header>
+
+    </header>
+
+    <main>
+        <section class="container">
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Dados Cadastrais</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <input type="radio" name="pessoa" id="rdb_pf" checked>
+                        <label for="rdb_pf">Pessoa Física</label>
+                        &nbsp;
+                        <input type="radio" name="pessoa" id="rdb_pj">
+                        <label for="rdb_pj">Pessoa Juridica</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-9">
+                        <label id="lbl_nome_razao" for="txt_nome_razao">Nome Completo:</label>
+                        <input type="text" name="nome_razao" class="form-control" id="txt_nome_razao"
+                            placeholder="Informe seu nome completo...">
+                    </div>
+                    <div class="col-3">
+                        <label id="lbl_nasc_abert" for="dt_nasc_abert">Data de Nascimento:</label>
+                        <input type="date" name="dt_nasc_abert" class="form-control" id="dt_nasc_abert">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-9">
+                        <label id="lbl_documento" for="txt_documento">CPF:</label>
+                        <input type="text" name="documento" class="form-control" id="txt_documento"
+                            placeholder="000.000.000-00">
+                    </div>
+                    <div class="col-3">
+                        <label id="lbl_sexo" for="slt_sexo">Sexo:</label>
+                        <select name="sexo" class="form-control" id="slt_sexo">
+                            <option value="">Selecione...</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="O">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-9">
+                        <label for="txt_email">E-mail:</label>
+                        <input type="email" name="email" class="form-control" id="txt_email"
+                            placeholder="Informe seu e-mail...">
+                    </div>
+                    <div class="col-3">
+                        <label for="txt_telefone">Celular:</label>
+                        <input type="tel" name="telefone" class="form-control" id="txt_telefone" maxlength="15"
+                            placeholder="(xx) xxxxx-xxxx">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="h1_endereco">Endereço Residencial</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="txt_cep">CEP:</label>
+                        <input type="tel" name="cep" class="form-control" id="txt_cep" maxlength="9"
+                            placeholder="00000-000">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-9">
+                        <label for="txt_logradouro">Logradouro:</label>
+                        <input type="text" name="logradouro" class="form-control" id="txt_logradouro"
+                            placeholder="Rua, Avenida, Rodovia...">
+                    </div>
+                    <div class="col-3">
+                        <label for="txt_numero">Numero:</label>
+                        <input type="tel" name="numero" class="form-control" id="txt_numero">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="txt_complemento">Complemento:</label>
+                        <input type="text" name="complemento" class="form-control" id="txt_complemento"
+                            placeholder="Bloco, Apartamento, Edifício, Casa...">
+                    </div>
+                    <div class="col-6">
+                        <label for="txt_bairro">Bairro/Setor:</label>
+                        <input type="text" name="bairro" class="form-control" id="txt_bairro">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="txt_cidade">Cidade:</label>
+                        <input type="text" name="cidade" class="form-control" id="txt_cidade">
+                    </div>
+                    <div class="col-6">
+                        <label for="slt_estado">Estado:</label>
+                        <select class="form-control" id="slt_estado" name="estado">
+                            <option value="">Selecione...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col-2">
+                        <button type="button" id="btnCadastrar" class="btn btn-block btn-lg btn-primary">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            Cadastrar
+                        </button>
+                    </div>
+                    <div class="col-5"></div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
 
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.mask.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/cadastro.js"></script>
 </body>
+
 </html>
