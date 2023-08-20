@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
 
             $("#lbl_sexo").css('display', 'inline-block');
             $("#slt_sexo").css('display', 'block');
-            $("#slt_sexo").prop('required', '');
+            $("#slt_sexo").prop('required', true);
 
             $("#h1_endereco").html('Endereço Residencial');
 
@@ -187,7 +187,7 @@ jQuery(document).ready(function ($) {
         });
 
         if (temInputObrigatorioVazio == true) {
-            
+
             let messageErro = '<p style="color: black;">Há '
                 + quantidadeInputsVazio + ' Campos Obrigatórios Vazios!</p>';
             swal({
